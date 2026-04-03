@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    @apply h-full w-full m-0 p-0;
+  }
+
+  body {
+    @apply bg-surface text-on-surface overflow-hidden;
+  }
+
+  input::-webkit-scrollbar,
+  textarea::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  input::-webkit-scrollbar-track,
+  textarea::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  input::-webkit-scrollbar-thumb,
+  textarea::-webkit-scrollbar-thumb {
+    @apply bg-outline-variant rounded;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-3 bg-primary text-white rounded-lg font-semibold text-sm uppercase transition-all hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-3 bg-secondary text-black rounded-lg font-semibold text-sm uppercase transition-all hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply px-4 py-3 border border-secondary text-secondary rounded-lg font-semibold text-sm uppercase transition-all hover:bg-secondary/10 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-base {
+    @apply w-full px-3 py-2 bg-surface-lowest border-none rounded-lg text-on-surface text-sm focus:outline-2 focus:outline-primary;
+  }
+}
+
+/* Custom scrollbar for left panel */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  @apply bg-outline-variant rounded;
+}

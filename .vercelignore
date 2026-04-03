@@ -1,0 +1,8 @@
+main.cjs
+preload.cjs
+forge.config.js
+webpack.*.js
+.webpack/
+node_modules/
+.git/
+.env
